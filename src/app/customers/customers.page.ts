@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router'; //Importar el router de angular
 
 @Component({
   selector: 'app-customers',
@@ -7,9 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CustomersPage implements OnInit {
 
-  constructor() { }
+  constructor(private router: Router) { } //Implementamos el router en el constructor
 
   ngOnInit() {
+  }
+
+  goToHome(){
+    this.router.navigate(['/home']) //Generamos la funcion para el redireccionamiento
   }
 
 }
