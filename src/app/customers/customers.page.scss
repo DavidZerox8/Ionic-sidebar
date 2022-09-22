@@ -8,6 +8,7 @@ ion-toolbar{
   padding: 10px 15px 10px 15px;
   border-radius: 16px;
   font-size: 15px;
+  margin-top: 10px;
 }
 
 #container{
@@ -17,4 +18,8 @@ ion-toolbar{
   right: 20px;
   top: 50%;
   transform: translateY(-50%);
+}
+
+.textMainColor{
+  color: var(--ion-color-custom);
 }
