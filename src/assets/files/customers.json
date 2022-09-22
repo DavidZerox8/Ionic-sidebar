@@ -1,0 +1,22 @@
+{
+  "data": [
+    {
+      "name": "Mirsa",
+      "state": "México",
+      "description": "Esta es una descripción simple",
+      "image": "https://i.pravatar.cc/150?img=43"
+    },
+    {
+      "name": "David",
+      "state": "México",
+      "description": "Esta es una descripción simple 2",
+      "image": "https://i.pravatar.cc/150?img=44"
+    },
+    {
+      "name": "Liliana",
+      "state": "México",
+      "description": "Esta es una descripción simple 3",
+      "image": "https://i.pravatar.cc/150?img=45"
+    }
+  ]
+}

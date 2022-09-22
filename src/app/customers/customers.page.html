@@ -9,10 +9,10 @@
   <div>
     <ion-list>
       <ion-list-header>
-        Título de la lista
+        Lista de clientes
       </ion-list-header>
 
-      <ion-item>
+      <!-- <ion-item>
         <ion-avatar slot="end">
           <img src="https://i.pravatar.cc/150?img=42" alt="">
         </ion-avatar>
@@ -21,23 +21,23 @@
           <h3>Subtitulo</h3>
           <p>Contenido</p>
         </ion-label>
-      </ion-item>
+      </ion-item> -->
 
-      <ion-item>
+      <ion-item *ngFor="let customer of customers">
         <ion-avatar slot="start">
-          <img src="https://i.pravatar.cc/150?img=43" alt="">
+          <img src="{{ customer.image }}" alt="">
         </ion-avatar>
         <ion-avatar slot="end">
           <ion-icon name="search"></ion-icon>
         </ion-avatar>
         <ion-label>
-          <h2 class="textMainColor">Titulo del item</h2>
-          <h3>Subtitulo</h3>
-          <p>Contenido</p>
+          <h2 class="textMainColor">{{ customer.name }}</h2>
+          <h3>{{ customer.state }}</h3>
+          <p>{{ customer.description }}</p>
         </ion-label>
       </ion-item>
 
-      <ion-item>
+      <!-- <ion-item>
         <ion-avatar slot="start">
           <img src="https://i.pravatar.cc/150?img=45" alt="">
         </ion-avatar>
@@ -46,7 +46,7 @@
           <h3>Subtitulo</h3>
           <p>Contenido</p>
         </ion-label>
-      </ion-item>
+      </ion-item> -->
 
     </ion-list>
 
