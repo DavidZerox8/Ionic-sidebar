@@ -1,2 +1,2 @@
 # Ionic-sidebar
-My first Ionic project
+My first Ionic 6 project
