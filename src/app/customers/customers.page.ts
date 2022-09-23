@@ -11,6 +11,7 @@ import { map } from 'rxjs/operators';
 export class CustomersPage implements OnInit {
 
   customers: any = [];
+  searchedUser: any;
 
   constructor(private router: Router, private http: HttpClient) { } //Implementamos el router, http en el constructor
 
@@ -18,6 +19,7 @@ export class CustomersPage implements OnInit {
     this.getCustomers().subscribe(res => {
       console.log('Res:', res)
       this.customers = res;
+      this.searchedUser = this.customers;
     });
   }
 
@@ -33,6 +35,17 @@ export class CustomersPage implements OnInit {
         return res.data;
       })
     )
+  }
+
+  searchCustomer(event){
+    const text = event.target.value;
+    this.searchedUser = this.customers;
+
+    if(text && text.trim() != ''){
+      this.searchedUser = this.searchedUser.filter((customer: any) => {
+        return (customer.name.toLowerCase().indexOf(text.toLowerCase()) > -1);
+      })
+    }
   }
 
 }
